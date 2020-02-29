@@ -3,3 +3,9 @@
 @import url(../search/__input-container/search__input-container.css);
 @import url(../search/__field/search__field.css);
 @import url(../search/__button/search__button.css);
+
+@media (max-width: 425px) {
+    .search {
+        padding: 0;
+    }
+}

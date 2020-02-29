@@ -1,0 +1,35 @@
+@import url(../delete/__icon/delete__icon.css);
+
+.delete {
+    width: 40px;
+    height: 40px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    border: none;
+    cursor: pointer;
+}
+
+.delete:hover .delete__icon {
+    fill: #1A1B22;
+}
+
+@media (max-width: 1024px) {
+    .delete  {
+        top: 8px;
+        right: 8px;
+    }
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 425px) {
+    .delete  {
+        top: 16px;
+        right: 16px;
+    }
+}

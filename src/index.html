@@ -8,43 +8,72 @@
     <meta name="description" content="Новостной обозреватель">
     <meta name="author" content="Ольга Милюкова">
     <title>MainNews</title>
-    <link rel="stylesheet" href="./pages/index.css">
+    <link rel="stylesheet" href="./index.css">
 </head>
 <body>
     <div class="page">
         <div class="content">
             <div class="cover">
-                <header class="header section">
-                    <div class="header__logo"></div>
-                    <nav class="header__menu header__menu_not-logged-in">
-                        <a href="index.html" class="header__menu-item">Главная</a>
-                        <button class="header__menu-button button" type="button" >Авторизоваться</button>
-                    </nav>
-                    <!-- <nav class="header__menu header__menu_logged-in">
-                        <a href="index.html" class="header__menu-item">Главная</a>
-                        <a href="saved-news.html" class="header__menu-item">Сохраненные статьи</a>
-                        <button class="header__menu-button button" type="button" >Грета
-                            <svg width="18" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M6 2H2v12h4v2H2a2 2 0 01-2-2V2a2 2 0 012-2h4v2zm7.586 7l-4.293 4.134 1.414 1.362 6.707-6.459-6.707-6.459L9.293 2.94l4.293 4.134H4V9h9.586z" fill="#fff"/></svg>
-                        </button>
-                    </nav> -->
+                <header class="header">
+                    <div class="header__container header__container_expandable section">
+                        <div class="header__container-row">
+                            <div class="header__logo"></div>
+                            <button class="header__menu-toggler">
+                                <i class="header__menu-icon header__menu-icon_toggler-light"></i>
+                                <!-- <i class="header__menu-icon header__menu-icon_collapse-light"></i> -->
+                            </button>
+                            <script>
+                                (function() {
+                                    document.querySelector('.header__menu-toggler').addEventListener(
+                                        'click',
+                                        function(e) {
+                                            const header = this.closest('.header');
+
+                                            header.classList.toggle('header_expanded');
+
+                                            const icon = this.children.item(0);
+                                            icon.classList.toggle('header__menu-icon_toggler-light');
+                                            icon.classList.toggle('header__menu-icon_collapse-light');
+                                        }
+                                    );
+                                })();
+                            </script>
+                        </div>
+                        <div class="header__container-line"></div>
+                        <div class="header__container-row header__container-row_expandable">
+                            <nav class="header__menu">
+                                <a href="index.html" class="header__menu-item header__menu-item_active">Главная</a>
+                                <!-- <button class="header__menu-button button">Авторизоваться</button> -->
+                                <a href="saved-news.html" class="header__menu-item header__menu-item_grey">Сохраненные статьи</a>
+                                <button class="header__menu-button button">Грета
+                                    <i class="header__menu-icon header__menu-icon_logout-light"></i>
+                                </button>
+                            </nav>
+                        </div>
+                    </div>
                 </header>
-                <section class="search section section_mid">
+                <section class="search section section_search">
                     <h1 class="search__title title title_main">Что в мире творится?</h1>
                     <p class="search__subtitle subtitle subtitle_normal">Находите самые свежие статьи на любую тему и сохраняйте в своём личном кабинете.</p>
                     <form class="search__input-container">
                         <input class="search__field" type="text" name="news" placeholder="Введите тему новости">
-                        <button class="search__button button" type="button">Искать</button>
+                        <button class="search__button button">Искать</button>
                     </form>
                 </section>
             </div>
-            <main>
-                <div class="results section">
-                    <section class="results__container">
+            <main class="main">
+                <div class="results">
+                    <section class="results__container section section_results">
                         <h2 class="results__title title title_mid">Результаты поиска</h2>
                         <div class="cards__container">
                             <div class="card">
                                 <div class="card__image" style="background-image: url(images/image_08.png);">
-                                    <button class="card__bookmark-icon"></button>
+                                    <button class="bookmark button">
+                                        <i class="bookmark__icon"></i>
+                                    </button>
+                                    <div class="tooltip">
+                                        <div class="tooltip__text">Войдите, чтобы сохранять статьи</div>
+                                    </div>
                                 </div>
                                 <div class="card__description">
                                     <h3 class="card__date">2 августа, 2019</h3>
@@ -52,46 +81,59 @@
                                     <p class="card__subtitle subtitle subtitle_small">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
                                     <p class="card__source">Лента.ру</p>
                                 </div>
-                            </div> 
+                            </div>
                             <div class="card">
                                 <div class="card__image" style="background-image: url(images/image_04.png);">
-                                    <button class="card__bookmark-icon"></button>
+                                    <button class="bookmark button">
+                                        <i class="bookmark__icon"></i>
+                                    </button>
+                                    <div class="tooltip">
+                                        <div class="tooltip__text">Войдите, чтобы сохранять статьи</div>
+                                    </div>
                                 </div>
                                 <div class="card__description">
                                     <h3 class="card__date">2 августа, 2019</h3>
                                     <h2 class="card__title title title_small">Лесные огоньки: история одной фотографии</h2>
-                                    <p class="card__subtitle subtitle subtitle_small">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного 
-                                из местных чудес природы.</p>
-                                <p class="card__source">Медуза</p>
+                                    <p class="card__subtitle subtitle subtitle_small">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного
+                                из местных чудес природы.
+                                    <!-- <h2 class="card__title title title_small">Национальное достояние – парки</h2>
+                                    <p class="card__subtitle subtitle subtitle_small">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p> -->
+                                    <p class="card__source">Медуза</p>
                                 </div>
-                            </div> 
+                            </div>
                             <div class="card">
                                 <div class="card__image" style="background-image: url(images/image_07.png);">
-                                    <button class="card__bookmark-icon"></button>
+                                    <button class="bookmark button">
+                                        <i class="bookmark__icon"></i>
+                                    </button>
+                                    <div class="tooltip">
+                                        <div class="tooltip__text">Войдите, чтобы сохранять статьи</div>
+                                    </div>
                                 </div>
                                 <div class="card__description">
                                     <h3 class="card__date">2 августа, 2019</h3>
                                     <h2 class="card__title title title_small">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h2>
                                     <p class="card__subtitle subtitle subtitle_small">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
+
+                                    <!-- <h2 class="card__title title title_small">Национальное достояние – парки</h2>
+                                    <p class="card__subtitle subtitle subtitle_small">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>    -->
                                     <p class="card__source">Риа</p>
                                 </div>
                             </div>
                         </div>
-                        <button class="results__button button" type="button">Показать еще</button>
+                        <button class="results__button button">Показать еще</button>
                     </section>
-                    
+
                     <!-- <div class="results__loading section section_narrow">
                         <i class="circle-preloader"></i>
                         <p class="results__subtitle subtitle subtitle_normal">Идет поиск новостей...</p>
                     </div> -->
 
                     <!-- <div class="results__no-results section section_narrow">
-                        <section class="no-results">
-                            <img src="images/not-found_v1.png" alt="" class="no-results__image">
-                            <h2 class="no-results__title title title_small">Ничего не найдено</h2>
-                            <p class="no-results__subtitle subtitle subtitle_normal">К сожалению по вашему запросу 
+                            <img src="images/not-found_v1.png" alt="" class="results__image">
+                            <h2 class="title title_small">Ничего не найдено</h2>
+                            <p class="results__subtitle subtitle subtitle_normal">К сожалению по вашему запросу
                             ничего не найдено.</p>
-                        </section>
                     </div> -->
                 </div>
                 <section class="about-author section">
@@ -99,29 +141,31 @@
                         <img src="images/image-03.png" alt="" class="about-author__image">
                         <div class="about-author__text">
                             <h2 class="about-author__title title title_mid">Об авторе</h2>
-                            <p class="about-author__subtitle subtitle subtitle_normal">Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владеете.
-                                 Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам.</p>
+                            <p class="about-author__subtitle subtitle subtitle_normal">Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владеете.</p>
+                            <p class="about-author__subtitle subtitle subtitle_normal">Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам.</p>
                         </div>
                     </div>
                 </section>
             </main>
             <footer class="footer section">
                 <p class="footer__copyright">&copy; 2020 Supersite, Powered by News API</p>
-                <nav>
-                    <ul class="footer__links">
+                <nav class="footer__lists">
+                    <ul class="footer__list-links">
                         <li>
                             <a href="index.html" class="footer__link">Главная</a>
                         </li>
                         <li>
                             <a href="https://praktikum.yandex.ru/" class="footer__link">Яндекс.Практикум</a>
                         </li>
+                    </ul>
+                    <ul class="footer__list-social">
                         <li>
-                            <a href="https://github.com/" class="footer__link">
+                            <a href="https://github.com/" class="footer__link-svg">
                                 <svg width="22" height="21" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M11 .895C5.417.895.895 5.423.895 11c0 4.466 2.897 8.25 6.91 9.59.503.093.689-.217.689-.49 0-.242-.007-.874-.013-1.718-2.81.608-3.405-1.352-3.405-1.352-.46-1.167-1.123-1.477-1.123-1.477-.918-.626.068-.614.068-.614 1.011.075 1.55 1.042 1.55 1.042.9 1.545 2.364 1.098 2.941.838.093-.652.354-1.098.64-1.353-2.246-.254-4.604-1.122-4.604-4.993 0-1.105.391-2.004 1.042-2.711-.105-.255-.452-1.284.1-2.674 0 0 .85-.273 2.779 1.036a9.806 9.806 0 012.53-.341 9.843 9.843 0 012.532.341c1.929-1.309 2.779-1.036 2.779-1.036.552 1.39.205 2.42.1 2.674.644.707 1.035 1.606 1.035 2.71 0 3.884-2.363 4.734-4.615 4.988.36.31.688.93.688 1.874 0 1.352-.012 2.438-.012 2.773 0 .272.18.583.695.483 4.013-1.34 6.904-5.124 6.904-9.584C21.105 5.423 16.583.895 11 .895z" fill="#191717"/></svg>
                             </a>
                         </li>
                         <li>
-                            <a href="https://www.facebook.com" class="footer__link">
+                            <a href="https://www.facebook.com" class="footer__link-svg">
                                 <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.896 0H1.104C.494 0 0 .494 0 1.104v17.793C0 19.506.494 20 1.104 20h9.58v-7.745H8.076V9.237h2.606V7.01c0-2.583 1.578-3.99 3.883-3.99 1.104 0 2.052.082 2.329.119v2.7h-1.598c-1.254 0-1.496.597-1.496 1.47v1.928h2.989l-.39 3.018h-2.6V20h5.098c.608 0 1.102-.494 1.102-1.104V1.104C20 .494 19.506 0 18.896 0z" fill="#000"/></svg>
                             </a>
                         </li>
@@ -130,5 +174,68 @@
             </footer>
         </div>
     </div>
+
+    <!-- <div class="popup">
+    <div class="popup__content">
+    <img src="images/back.svg" alt="" class="popup__close">
+    <h3 class="popup__title">Вход</h3>
+    <form class="popup__form" name="new">
+        <label for="email" class="popup__label">Email</label>
+        <input type="email" name="email" class="popup__input popup__input_type_email" placeholder="Введите почту">
+        <span class="popup__input-error">Неправильный формат email</span>
+        <label for="password" class="popup__label">Пароль</label>
+        <input type="password" name="password" class="popup__input popup__input_type_password" placeholder="Введите пароль" maxlength="">
+        <button class="button popup__button">Войти</button>
+    </form>
+    <div class="popup__text">или
+        <a href="#" class="popup__link">Зарегистрироваться</a>
+    </div>
+    </div>
+</div> -->
+
+    <!-- <div class="popup">
+    <div class="popup__content">
+    <img src="images/back.svg" alt="" class="popup__close">
+    <h3 class="popup__title">Регистрация</h3>
+    <form class="popup__form" name="new">
+        <div class="popup__form-input">
+        <label for="email" class="popup__label">Email</label>
+        <input type="email" name="email" class="popup__input popup__input_type_email" placeholder="Введите почту">
+        <span class="popup__input-error">Неправильный формат email</span>
+        <label for="password" class="popup__label">Пароль</label>
+        <input type="password" name="password" class="popup__input popup__input_type_password" placeholder="Введите пароль" maxlength="">
+        <label for="password" class="popup__label">Имя</label>
+        <input type="text" name="username" class="popup__input popup__input_type_username" placeholder="Введите своё имя">
+        </div>
+        <div class="popup__form-error">
+        <span class="popup__input-error">Такой пользователь уже есть</span>
+        </div>
+        <button class="button popup__button">Зарегистрироваться</button>
+    </form>
+    <div class="popup__text">или
+        <a href="#" class="popup__link">Войти</a>
+    </div>
+    </div>
+</div> -->
+
+    <!-- <div class="popup">
+        <div class="popup__content popup__content_small">
+            <img src="images/back.svg" alt="" class="popup__close">
+            <h3 class="popup__title">Пользователь успешно зарегистрирован!</h3>
+            <div class="popup__text popup__text_align-left">
+                <a href="# " class="popup__link">Выполнить вход</a>
+            </div>
+        </div>
+    </div> -->
+    <!-- <script>
+        (function() {
+            document.querySelector('.popup__close').addEventListener(
+                'click',
+                function(e) {
+                    this.closest('.popup').style.display = 'none';
+                }
+            );
+        })();
+    </script> -->
 </body>
 </html>

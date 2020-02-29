@@ -1,0 +1,6 @@
+.header__menu-icon_collapse-dark {
+    background: url(./header__menu-icon_collapse-dark.svg) center no-repeat;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+}

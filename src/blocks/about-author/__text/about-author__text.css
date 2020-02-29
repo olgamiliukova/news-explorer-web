@@ -1,0 +1,25 @@
+.about-author__text {
+    display: flex;
+    flex-direction: column;
+    margin: 17px 56px;
+}
+
+@media (max-width: 768px) {
+    .about-author__text {
+        margin: 0 30px;
+    }
+}
+
+@media (max-width: 540px) {
+    .about-author__text {
+        flex-direction: column;
+        margin: 27px 0 0 5px;
+    }
+}
+
+@media (max-width: 320px) {
+    /* .about-author__text {
+        flex-direction: column;
+        margin: 27px 0 0 5px;
+    } */
+}

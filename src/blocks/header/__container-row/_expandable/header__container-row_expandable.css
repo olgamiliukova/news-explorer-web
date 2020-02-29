@@ -1,0 +1,9 @@
+@media (max-width: 540px) {
+    .header__container-row.header__container-row_expandable {
+        display: none;
+    }
+
+    .header_expanded .header__container-row.header__container-row_expandable {
+        display: block;
+    }
+}

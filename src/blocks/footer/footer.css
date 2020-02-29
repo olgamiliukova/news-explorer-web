@@ -1,3 +1,32 @@
 @import url(../footer/__copyright/footer__copyright.css);
-@import url(../footer/__links/footer__links.css);
+@import url(../footer/__lists/footer__lists.css);
+@import url(../footer/__list-links/footer__list-links.css);
+@import url(../footer/__list-social/footer__list-social.css);
 @import url(../footer/__link/footer__link.css);
+@import url(../footer/__link-svg/footer__link-svg.css);
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+}
+
+
+@media (max-width: 768px) {
+   .footer {
+        padding: 20px 0;
+   }
+}
+
+@media (max-width: 540px) {
+    .footer {
+        flex-direction: column-reverse;
+    }
+}
+
+@media (max-width: 320px) {
+    /* .footer {
+        flex-direction: column-reverse;
+    } */
+}

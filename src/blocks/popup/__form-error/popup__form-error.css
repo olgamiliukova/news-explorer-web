@@ -1,0 +1,5 @@
+.popup__form-error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,16 @@
+.popup__input-error {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    color: #FF0000;
+    /* display: none; */
+    position: absolute;
+    margin-top: 45px;
+    animation: errors .1s ease-in-out;
+}
+
+.popup__form-error .popup__input-error {
+  margin: 30px auto 0;
+}

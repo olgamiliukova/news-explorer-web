@@ -1,0 +1,11 @@
+.header__menu-item_active {
+    border: 0;
+    padding-bottom: 21px;
+    border-bottom: 2px solid currentColor;
+}
+
+@media (max-width: 540px) {
+    .header__menu-item_active {
+        border: none;
+    }
+}

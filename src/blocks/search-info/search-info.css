@@ -1,2 +1,26 @@
+@import url(../search-info/__heading/search-info__heading.css);
 @import url(../search-info/__subtitle/search-info__subtitle.css);
 @import url(../search-info/__title/search-info__title.css);
+
+.search-info {
+    margin-top: 40px;
+    margin-bottom: 56px;
+}
+
+@media (max-width: 768px) {
+    .search-info {
+        margin-top: 24px;
+        margin-bottom: 35px;
+    }
+}
+
+@media (max-width: 375px) {
+
+}
+
+@media (max-width: 320px) {
+    .search-info {
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+}

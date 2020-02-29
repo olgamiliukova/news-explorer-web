@@ -1,0 +1,8 @@
+@media (max-width: 540px) {
+    .header__menu {
+       display: flex;
+       flex-direction: column;
+       align-items: flex-start;
+       padding: 0 0 24px;
+    }
+}

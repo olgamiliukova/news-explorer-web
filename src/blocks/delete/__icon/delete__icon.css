@@ -1,0 +1,13 @@
+.delete__icon {
+    background: url(./delete__icon.svg) center no-repeat;
+    background-color: transparent;
+    border: none;
+    width: 19px;
+    height: 19px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* .delete__icon:hover {
+    fill: #1A1B22;
+} */

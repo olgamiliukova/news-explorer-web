@@ -1,0 +1,19 @@
+.search__input-container {
+    width: 100%;
+    display: flex;
+    margin: 0 0 80px;
+}
+
+@media (max-width: 768px) {
+    .search__input-container {
+        margin: 0 0 48px;
+    }
+}
+
+@media (max-width: 425px) {
+    .search__input-container {
+        display: flex;
+        flex-direction: column;
+        margin: 0 0 32px;
+    }
+}

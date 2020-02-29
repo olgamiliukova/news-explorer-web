@@ -1,0 +1,22 @@
+@import url(../tooltip/__text/tooltip__text.css);
+
+.tooltip {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    background: #FFFFFF;
+    box-shadow: 0px 10px 22px rgba(59, 74, 116, 0.1);
+    border-radius: 10px;
+    position: absolute;
+    top: 24px;
+    right: 69px;
+}
+
+.bookmark:hover ~ .tooltip {
+    display: flex;
+}
+
+.delete:hover ~ .tooltip {
+    display: flex;
+}

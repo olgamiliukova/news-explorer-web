@@ -15,3 +15,27 @@
     src: url(./fonts/roboto-medium-webfont.woff);
     font-weight: medium;
 }
+
+@font-face {
+    font-family: 'Inter';
+    src: url(./fonts/Inter-Regular.woff);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url(./fonts/Inter-Medium.woff);
+    font-weight: medium;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url(./fonts/Inter-Black.woff);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url(./fonts/SourceSansPro-Regular.woff);
+    font-weight: normal;
+}

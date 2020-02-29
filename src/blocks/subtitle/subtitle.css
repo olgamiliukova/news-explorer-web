@@ -1,2 +1,8 @@
 @import url(../subtitle/_normal/subtitle_normal.css);
 @import url(../subtitle/_small/subtitle_small.css);
+
+.subtitle {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+}

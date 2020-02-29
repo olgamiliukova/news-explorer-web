@@ -1,0 +1,16 @@
+.header__menu-button.header__menu-button_dark {
+    color: #1A1B22;
+    border: 1px solid #D1D2D6;
+}
+
+@media (max-width: 768px) {
+    
+}
+
+@media (max-width: 375px) {
+
+}
+
+@media (max-width: 320px) {
+    
+}

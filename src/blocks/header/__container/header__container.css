@@ -1,0 +1,15 @@
+@import url(./_expandable/header__container_expanable.css);
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 540px) {
+    .header__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

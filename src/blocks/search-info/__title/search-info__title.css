@@ -1,0 +1,22 @@
+.search-info__title {
+    margin: 30px 0;
+    width: 40%;
+}
+
+@media (max-width: 768px) {
+    .search-info__title {
+        margin: 16px 0;
+        width: 50%;
+    }
+}
+
+@media (max-width: 375px) {
+
+}
+
+@media (max-width: 320px) {
+    .search-info__title {
+        margin: 16px 0;
+        width: 100%;
+    }
+}

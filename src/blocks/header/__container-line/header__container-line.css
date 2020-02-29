@@ -1,0 +1,12 @@
+.header__container-line {
+    display: none;
+}
+
+@media (max-width: 540px) {
+    .header__container-line {
+        border-top: 1px solid rgba(255, 255, 255, .2);
+        display: block;
+        margin-top: 3px;
+        width: 100%;
+    }
+}

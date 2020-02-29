@@ -1,2 +1,18 @@
-@import url(../__subtitle/_light/search-info__subtitle_light.css);
 @import url(../__subtitle/_dark/search-info__subtitle_dark.css);
+@import url(../__subtitle/_bold/search-info__subtitle_bold.css);
+
+.search-info__subtitle {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 375px) {
+
+}
+
+@media (max-width: 320px) {
+
+}

@@ -1,5 +1,33 @@
+@import url(../header/_dark/header_dark.css);
+@import url(../header/_expanded/header_expanded.css);
+@import url(../header/__container/header__container.css);
 @import url(../header/__logo/header__logo.css);
-@import url(../header/__menu/_not-logged-in/header__menu_not-logged-in.css);
-@import url(../header/__menu/_logged-in/header__menu_logged-in.css);
+@import url(../header/__menu/header__menu.css);
+@import url(../header/__menu-button/header__menu-button.css);
+@import url(../header/__menu-icon/header__menu-icon.css);
+@import url(../header/__menu-toggler/header__menu-toggler.css);
+@import url(../header/__container-line/header__container-line.css);
+@import url(../header/__container-row/header__container-row.css);
 @import url(../header/__menu-item/header__menu-item.css);
 @import url(../header/__menu-button/header__menu-button.css);
+@import url(../header/__menu-icon/header__menu-icon.css);
+@import url(../header/__menu-toggler/header__menu-toggler.css);
+
+.header {
+    border-bottom: solid 1px rgba(255, 255, 255, 0.2);
+    height: 80px;
+    width: 100%;
+    z-index: 2;
+}
+
+@media (max-width: 768px) {
+    .header {
+        height: 66px;
+    }
+}
+
+@media (max-width: 540px) {
+    .header {
+        height: 56px;
+    }
+}
