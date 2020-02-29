@@ -1,4 +1,4 @@
-@import url(../__logo/_dark/header__logo_dark.css);
+@import url(./_dark/header__logo_dark.css);
 
 .header__logo {
     width: 134px;
@@ -7,6 +7,11 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+}
+
+.header__logo:hover {
+    opacity: 0.7;
+    transition: opacity 0.1s linear;
 }
 
 @media (max-width: 768px) {

@@ -1,6 +1,6 @@
-@import url(../__menu-icon/_collapse-dark/header__menu-icon_collapse-dark.css);
-@import url(../__menu-icon/_collapse-light/header__menu-icon_collapse-light.css);
-@import url(../__menu-icon/_logout-dark/header__menu-icon_logout-dark.css);
-@import url(../__menu-icon/_logout-light/header__menu-icon_logout-light.css);
-@import url(../__menu-icon/_toggler-dark/header__menu-icon_toggler-dark.css);
-@import url(../__menu-icon/_toggler-light/header__menu-icon_toggler-light.css);
+@import url(./_collapse-dark/header__menu-icon_collapse-dark.css);
+@import url(./_collapse-light/header__menu-icon_collapse-light.css);
+@import url(./_logout-dark/header__menu-icon_logout-dark.css);
+@import url(./_logout-light/header__menu-icon_logout-light.css);
+@import url(./_toggler-dark/header__menu-icon_toggler-dark.css);
+@import url(./_toggler-light/header__menu-icon_toggler-light.css);

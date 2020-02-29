@@ -1,5 +1,5 @@
-@import url(../subtitle/_normal/subtitle_normal.css);
-@import url(../subtitle/_small/subtitle_small.css);
+@import url(./_normal/subtitle_normal.css);
+@import url(./_small/subtitle_small.css);
 
 .subtitle {
     font-family: Roboto;

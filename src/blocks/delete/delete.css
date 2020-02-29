@@ -1,4 +1,4 @@
-@import url(../delete/__icon/delete__icon.css);
+@import url(./__icon/delete__icon.css);
 
 .delete {
     width: 40px;
@@ -10,10 +10,6 @@
     right: 24px;
     border: none;
     cursor: pointer;
-}
-
-.delete:hover .delete__icon {
-    fill: #1A1B22;
 }
 
 @media (max-width: 1024px) {

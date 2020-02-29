@@ -1,4 +1,4 @@
-@import url(../__menu-button/_dark/header__menu-button_dark.css);
+@import url(./_dark/header__menu-button_dark.css);
 
 .header__menu-button {
     border-radius: 100px;

@@ -1,4 +1,4 @@
-@import url(../tooltip/__text/tooltip__text.css);
+@import url(./__text/tooltip__text.css);
 
 .tooltip {
     display: none;
@@ -19,4 +19,18 @@
 
 .delete:hover ~ .tooltip {
     display: flex;
+}
+
+@media (max-width: 1024px) {
+    .tooltip {
+        top: 8px;
+        right: 50px;
+    }
+}
+
+@media (max-width: 425px) {
+    .tooltip {
+        top: 16px;
+        right: 60px;
+    }
 }

@@ -1,3 +1,5 @@
+@import url(./_hover/delete__icon_hover.css);
+
 .delete__icon {
     background: url(./delete__icon.svg) center no-repeat;
     background-color: transparent;
@@ -7,7 +9,3 @@
     padding: 10px;
     cursor: pointer;
 }
-
-/* .delete__icon:hover {
-    fill: #1A1B22;
-} */

@@ -1,6 +1,6 @@
-@import url(../__menu-item/_grey/header__menu-item_grey.css);
-@import url(../__menu-item/_dark/header__menu-item_dark.css);
-@import url(../__menu-item/_active/header__menu-item_active.css);
+@import url(./_active/header__menu-item_active.css);
+@import url(./_dark/header__menu-item_dark.css);
+@import url(./_grey/header__menu-item_grey.css);
 
 .header__menu-item {
     font-family: Roboto;

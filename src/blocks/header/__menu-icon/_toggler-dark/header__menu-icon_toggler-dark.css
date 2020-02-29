@@ -4,3 +4,9 @@
     height: 24px;
     display: inline-block;
 }
+
+@media (max-width: 540px) {
+    .header.header_expanded .header__menu-icon_toggler-dark {
+        background: url(../_toggler-light/header__menu-icon_toggler-light.svg) center no-repeat;
+    }
+}

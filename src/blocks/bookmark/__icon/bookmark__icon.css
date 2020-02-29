@@ -1,3 +1,6 @@
+@import url(./_hover/bookmark__icon_hover.css);
+@import url(./_marked/bookmark__icon_marked.css);
+
 .bookmark__icon {
     background: url(./bookmark__icon.svg) center no-repeat;
     background-color: transparent;

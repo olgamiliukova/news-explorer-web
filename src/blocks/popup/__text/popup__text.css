@@ -1,4 +1,4 @@
-@import url(../__text/_align-left/popup__text_align-left.css);
+@import url(./_align-left/popup__text_align-left.css);
 
 .popup__text {
     font-family: Inter;

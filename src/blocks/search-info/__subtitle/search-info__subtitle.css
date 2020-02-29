@@ -1,5 +1,5 @@
-@import url(../__subtitle/_dark/search-info__subtitle_dark.css);
-@import url(../__subtitle/_bold/search-info__subtitle_bold.css);
+@import url(./_bold/search-info__subtitle_bold.css);
+@import url(./_dark/search-info__subtitle_dark.css);
 
 .search-info__subtitle {
     margin: 0;

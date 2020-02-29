@@ -1,6 +1,6 @@
-@import url(../__input/_type_email/popup__input_type_email.css);
-@import url(../__input/_type_password/popup__input_type_password.css);
-@import url(../__input/_type_username/popup__input_type_username.css);
+@import url(./_type_email/popup__input_type_email.css);
+@import url(./_type_password/popup__input_type_password.css);
+@import url(./_type_username/popup__input_type_username.css);
 
 .popup__input {
     width: 100%;

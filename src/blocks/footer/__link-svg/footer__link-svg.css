@@ -4,6 +4,11 @@
     margin-left: 30px;
 }
 
+.footer__link-svg:hover {
+    opacity: 0.7;
+    transition: opacity 0.1s linear;
+}
+
 @media (max-width: 768px) {
     .footer__link-svg {
         margin-left: 20px;
@@ -14,10 +19,4 @@
     .footer__link-svg {
         margin-left: 30px;
     }
-}
- 
-@media (max-width: 320px) {
-    /* .footer__link-svg {
-        margin-left: 30px;
-    } */
 }

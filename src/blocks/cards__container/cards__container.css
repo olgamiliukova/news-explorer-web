@@ -1,4 +1,4 @@
-@import url(../cards__container/_saved-news-page/cards__container_saved-news-page.css);
+@import url(./_saved-news-page/cards__container_saved-news-page.css);
 
 .cards__container {
     display: grid;
