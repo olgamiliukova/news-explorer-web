@@ -69,13 +69,14 @@
                         <h2 class="results__title title title_mid">Результаты поиска</h2>
                         <div class="cards__container">
                             <div class="card">
-                                <div class="card__image" style="background-image: url(images/image_08.png);">
+                                <div class="card__image-cover">
                                     <button class="bookmark button">
                                         <i class="bookmark__icon"></i>
                                     </button>
                                     <div class="tooltip">
                                         <div class="tooltip__text">Войдите, чтобы сохранять статьи</div>
                                     </div>
+                                    <img class="card__image" src="images/image_08.png">
                                 </div>
                                 <div class="card__description">
                                     <h3 class="card__date">2 августа, 2019</h3>
@@ -85,13 +86,14 @@
                                 </div>
                             </div>
                             <div class="card">
-                                <div class="card__image" style="background-image: url(images/image_04.png);">
+                                <div class="card__image-cover">
                                     <button class="bookmark button">
                                         <i class="bookmark__icon"></i>
                                     </button>
                                     <div class="tooltip">
                                         <div class="tooltip__text">Войдите, чтобы сохранять статьи</div>
                                     </div>
+                                    <img class="card__image" src="images/image_04.png">
                                 </div>
                                 <div class="card__description">
                                     <h3 class="card__date">2 августа, 2019</h3>
@@ -104,13 +106,14 @@
                                 </div>
                             </div>
                             <div class="card">
-                                <div class="card__image" style="background-image: url(images/image_07.png);">
+                                <div class="card__image-cover">
                                     <button class="bookmark button">
                                         <i class="bookmark__icon"></i>
                                     </button>
                                     <div class="tooltip">
                                         <div class="tooltip__text">Войдите, чтобы сохранять статьи</div>
                                     </div>
+                                    <img class="card__image" src="images/image_07.png">
                                 </div>
                                 <div class="card__description">
                                     <h3 class="card__date">2 августа, 2019</h3>
@@ -140,7 +143,7 @@
                 </div>
                 <section class="about-author section">
                     <div class="about-author__row">
-                        <img src="images/image-03.png" alt="" class="about-author__image">
+                        <img src="images/image-03.png" alt="Фото автора" class="about-author__image">
                         <div class="about-author__text">
                             <h2 class="about-author__title title title_mid">Об авторе</h2>
                             <p class="about-author__subtitle subtitle subtitle_normal">Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владеете.</p>
@@ -177,59 +180,109 @@
         </div>
     </div>
 
-    <!-- <div class="popup">
-    <div class="popup__content">
-    <img src="images/back.svg" alt="" class="popup__close">
-    <h3 class="popup__title">Вход</h3>
-    <form class="popup__form" name="new">
-        <label for="email" class="popup__label">Email</label>
-        <input type="email" name="email" class="popup__input popup__input_type_email" placeholder="Введите почту">
-        <span class="popup__input-error">Неправильный формат email</span>
-        <label for="password" class="popup__label">Пароль</label>
-        <input type="password" name="password" class="popup__input popup__input_type_password" placeholder="Введите пароль" maxlength="">
-        <button class="button popup__button">Войти</button>
-    </form>
-    <div class="popup__text">или
-        <a href="#" class="popup__link">Зарегистрироваться</a>
-    </div>
-    </div>
-</div> -->
-
-    <!-- <div class="popup">
-    <div class="popup__content">
-    <img src="images/back.svg" alt="" class="popup__close">
-    <h3 class="popup__title">Регистрация</h3>
-    <form class="popup__form" name="new">
-        <div class="popup__form-input">
-        <label for="email" class="popup__label">Email</label>
-        <input type="email" name="email" class="popup__input popup__input_type_email" placeholder="Введите почту">
-        <span class="popup__input-error">Неправильный формат email</span>
-        <label for="password" class="popup__label">Пароль</label>
-        <input type="password" name="password" class="popup__input popup__input_type_password" placeholder="Введите пароль" maxlength="">
-        <label for="password" class="popup__label">Имя</label>
-        <input type="text" name="username" class="popup__input popup__input_type_username" placeholder="Введите своё имя">
+    <div class="popup popup__signin">
+        <div class="popup__content">
+            <button class="popup__close">
+                <i class="popup__close-icon"></i>
+            </button>
+            <h3 class="popup__title">Вход</h3>
+            <form class="popup__form" name="new">
+                <div class="popup__form-input">
+                    <label for="email" class="popup__label">Email</label>
+                    <input 
+                        type="email" 
+                        name="email" 
+                        pattern="[a-z0-9\._%\+\-]+@[a-z0-9\.\-]+\.[a-z]{2,4}$" 
+                        class="popup__input popup__input_type_email" 
+                        placeholder="Введите почту"
+                        required>
+                    <span class="popup__input-error">Неправильный формат email</span>
+                </div>
+                <div class="popup__form-input">
+                    <label for="password" class="popup__label">Пароль</label>
+                    <input 
+                        type="password" 
+                        name="password" 
+                        class="popup__input popup__input_type_password" 
+                        placeholder="Введите пароль" 
+                        minlength="8"
+                        maxlength="30" 
+                        required>
+                    <span class="popup__input-error">Неправильный формат пароля</span>
+                </div>
+                <button class="button popup__button">Войти</button>
+            </form>
+            <div class="popup__text">или
+                <a href="#" class="popup__link">Зарегистрироваться</a>
+            </div>
         </div>
-        <div class="popup__form-error">
-        <span class="popup__input-error">Такой пользователь уже есть</span>
-        </div>
-        <button class="button popup__button">Зарегистрироваться</button>
-    </form>
-    <div class="popup__text">или
-        <a href="#" class="popup__link">Войти</a>
     </div>
-    </div>
-</div> -->
 
-    <!-- <div class="popup">
+    <div class="popup popup__signup">
+        <div class="popup__content">
+            <button class="popup__close">
+                <i class="popup__close-icon"></i>
+            </button>
+            <h3 class="popup__title">Регистрация</h3>
+            <form class="popup__form" name="new">
+                <div class="popup__form-input">
+                    <label for="email" class="popup__label">Email</label>
+                    <input 
+                        type="email" 
+                        name="email" 
+                        pattern="[a-z0-9\._%\+\-]+@[a-z0-9\.\-]+\.[a-z]{2,4}$" 
+                        class="popup__input popup__input_type_email" 
+                        placeholder="Введите почту" 
+                        required>
+                    <span class="popup__input-error">Неправильный формат email</span>
+                </div>
+                <div class="popup__form-input">
+                    <label for="password" class="popup__label">Пароль</label>
+                    <input 
+                        type="password" 
+                        name="password" 
+                        class="popup__input popup__input_type_password" 
+                        placeholder="Введите пароль" 
+                        minlength="8"
+                        maxlength="30"
+                        required>
+                    <span class="popup__input-error">Неправильный формат пароля</span>
+                </div>
+                <div class="popup__form-input">
+                    <label for="username" class="popup__label">Имя</label>
+                    <input 
+                        type="text" 
+                        name="username" 
+                        class="popup__input popup__input_type_username" 
+                        placeholder="Введите своё имя"
+                        minlength="2"
+                        maxlength="30"
+                        required>
+                    <span class="popup__input-error">Неправильный формат имени</span>
+                </div>
+                <div class="popup__form-error">
+                    <span class="popup__input-error">Такой пользователь уже есть</span>
+                </div>
+                <button class="button popup__button">Зарегистрироваться</button>
+            </form>
+            <div class="popup__text">или
+                <a href="#" class="popup__link">Войти</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup popup__welcom">
         <div class="popup__content popup__content_small">
-            <img src="images/back.svg" alt="" class="popup__close">
+            <button class="popup__close">
+                <i class="popup__close-icon"></i>
+            </button>
             <h3 class="popup__title">Пользователь успешно зарегистрирован!</h3>
             <div class="popup__text popup__text_align-left">
                 <a href="# " class="popup__link">Выполнить вход</a>
             </div>
         </div>
-    </div> -->
-    <!-- <script>
+    </div>
+    <script>
         (function() {
             document.querySelector('.popup__close').addEventListener(
                 'click',
@@ -238,6 +291,6 @@
                 }
             );
         })();
-    </script> -->
+    </script>
 </body>
 </html>

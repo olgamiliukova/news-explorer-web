@@ -1,5 +1,6 @@
 @import url(./__button/popup__button.css);
 @import url(./__close/popup__close.css);
+@import url(./__close-icon/popup__close-icon.css);
 @import url(./__content/popup__content.css);
 @import url(./__form/popup__form.css);
 @import url(./__form-error/popup__form-error.css);
@@ -23,7 +24,7 @@
     align-items: center;
     justify-content: center;
     z-index: 999;
-    /* display: none; */
+    display: none;
 }
 
 .popup::before {

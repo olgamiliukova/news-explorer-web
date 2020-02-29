@@ -1,0 +1,13 @@
+.popup__close-icon {
+    background: url(./popup__close-icon.svg) center no-repeat;
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+}
+
+@media (max-width: 540px) {
+    .popup__close-icon {
+        height: 24px;
+        width: 24px;
+    }
+}

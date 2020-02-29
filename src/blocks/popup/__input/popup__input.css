@@ -13,10 +13,8 @@
     font-size: 14px;
     line-height: 17px;
     color: #000000;
-    opacity: 0.2;
     box-sizing: border-box;
     padding: 13px 0 8px;
-    margin-bottom: 30px;
     outline: none;
 }
 
@@ -30,4 +28,8 @@
 
 .popup__input:invalid:not(:placeholder-shown) + .popup__input-error {
 	display: flex;
+}
+
+.popup__input:focus {
+    border-bottom: 1px solid #000;
 }
