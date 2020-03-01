@@ -1,0 +1,7 @@
+.footer__link-icon_github {
+    background: url(./footer__link-icon_github.svg) center no-repeat;
+    background-color: transparent;
+    border: none;
+    width: 22px;
+    height: 21px;
+}

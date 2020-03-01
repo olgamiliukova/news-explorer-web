@@ -1,3 +1,6 @@
 .popup__text.popup__text_align-left {
     text-align: left;
+    font-size: 18px;
+    color: #2F71E5;
+    text-decoration: none;
 }

@@ -15,7 +15,6 @@
 
 .popup {
     position: fixed;
-    /* top: 200px; */
     top: 0;
     left: 0;
     width: 100%;
@@ -40,7 +39,6 @@
 
 @media (max-width: 540px) {
     .popup {
-       top: 56px;
        z-index: 3;
     }
 }

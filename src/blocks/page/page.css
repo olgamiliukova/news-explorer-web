@@ -1,6 +1,8 @@
 .page {
     background-color: #FFFFFF;
     color: #1A1B22;
-    font-family: Roboto, 'Roboto Slab';
+    font-family: Roboto, 'Roboto Slab', 'Source Sans Pro', Inter, Arial, sans-serif;
     min-width: 320px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }

@@ -4,7 +4,8 @@
     font-weight: normal;
     font-size: 12px;
     line-height: 15px;
-    color: #FF0000;
+    color: #ff0000;
     display: none;
     animation: errors .1s ease-in-out;
+    margin-top: 5px;
 }

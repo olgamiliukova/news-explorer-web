@@ -26,5 +26,6 @@
 @media (max-width: 540px) {
     .header {
         height: 56px;
+        border: none;
     }
 }

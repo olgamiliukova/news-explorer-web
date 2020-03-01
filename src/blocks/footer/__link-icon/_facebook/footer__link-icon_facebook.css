@@ -1,0 +1,7 @@
+.footer__link-icon_facebook {
+    background: url(./footer__link-icon_facebook.svg) center no-repeat;
+    background-color: transparent;
+    border: none;
+    width: 20px;
+    height: 20px;
+}
