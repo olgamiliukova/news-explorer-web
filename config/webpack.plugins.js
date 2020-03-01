@@ -1,13 +1,12 @@
 /* eslint-disable import/no-extraneous-dependencies */
 const cssnano = require('cssnano');
 
+const WebpackDotenv = require('webpack-dotenv-plugin');
 const WebpackPackage = require('webpack');
 const WebpackBar = require('webpackbar');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-
-const config = require('./webcore.config');
 
 // Optimize CSS assets
 const optimizeCss = new OptimizeCssAssetsPlugin({
@@ -20,6 +19,10 @@ const optimizeCss = new OptimizeCssAssetsPlugin({
 });
 
 module.exports = [
+  new WebpackDotenv({
+    sample: './.env.dist',
+    path: './.env',
+  }),
   new WebpackPackage.DefinePlugin({
     NODE_ENV: JSON.stringify(process.env.NODE_ENV),
   }),
@@ -30,5 +33,5 @@ module.exports = [
   new WebpackBar({
     color: '#ff6469',
   }),
-  ...(config.env === 'production' ? [optimizeCss] : []),
+  ...(process.env.NODE_ENV === 'production' ? [optimizeCss] : []),
 ];

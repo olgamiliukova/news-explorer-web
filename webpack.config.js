@@ -1,9 +1,9 @@
 const path = require('path');
 
+const plugins = require('./config/webpack.plugins');
 const config = require('./config/webcore.config');
 const loaders = require('./config/webpack.loaders');
 const pages = require('./config/webpack.pages');
-const plugins = require('./config/webpack.plugins');
 
 module.exports = () => [
   {

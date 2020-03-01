@@ -6,7 +6,7 @@ module.exports = {
   site_description: process.env.SITE_DESCRIPTION || '',
 
   // Your website's URL, used for sitemap
-  site_url: process.env.SITE_URL || '/dist/',
+  site_url: process.env.SITE_URL || '',
 
   // The viewport meta tag added to your HTML page's <head> tag
   site_meta: {

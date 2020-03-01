@@ -87,8 +87,8 @@ const images = {
     {
       loader: 'url-loader',
       options: {
-        name: 'images/[name].[hash].[ext]',
-        limit: false, // 8192,
+        name: '/images/[name].[hash].[ext]',
+        limit: false,
         fallback: require.resolve('file-loader'),
         esModule: false,
       },
@@ -97,7 +97,7 @@ const images = {
   ],
 };
 
-// Font loaders
+// Asset loaders
 const fonts = {
   test: /\.(woff|woff2|eot|ttf|otf|svg)$/,
   exclude: /images/,
@@ -106,7 +106,7 @@ const fonts = {
       loader: 'file-loader',
       query: {
         name: '[name].[hash].[ext]',
-        outputPath: 'assets/',
+        outputPath: '/assets/',
         esModule: false,
       },
     },
