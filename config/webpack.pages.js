@@ -35,8 +35,34 @@ module.exports = {
   ].map(
     (options) => new HtmlWebpackPlugin({
       favicon: path.resolve(config.root, './src/assets/favicon.ico'),
-      minify: config.env === 'production',
+      minify: config.env === 'production'
+        ? {
+          collapseWhitespace: true,
+          removeComments: true,
+          removeRedundantAttributes: true,
+          removeScriptTypeAttributes: true,
+          removeStyleLinkTypeAttributes: true,
+          useShortDoctype: true,
+        }
+        : false,
       inject: 'body',
+      cspPlugin: {
+        enabled: true,
+        policy: {
+          'base-uri': "'self'",
+          'object-src': "'none'",
+          'script-src': ["'unsafe-inline'", "'self'", "'unsafe-eval'"],
+          'style-src': ["'unsafe-inline'", "'self'", "'unsafe-eval'"],
+        },
+        hashEnabled: {
+          'script-src': true,
+          'style-src': true,
+        },
+        nonceEnabled: {
+          'script-src': true,
+          'style-src': true,
+        },
+      },
       ...options,
       meta: {
         ...config.site_meta,
