@@ -1,0 +1,55 @@
+<div class="popup popup__signup">
+  <div class="popup__content">
+      <button class="popup__close">
+          <i class="popup__close-icon"></i>
+      </button>
+      <h3 class="popup__title">Регистрация</h3>
+      <form class="popup__form" name="new">
+          <div class="popup__form-input">
+              <label for="signup-email" class="popup__label">Email</label>
+              <input
+                  type="email"
+                  name="email"
+                  pattern="[a-z0-9\._%\+\-]+@[a-z0-9\.\-]+\.[a-z]{2,4}$"
+                  class="popup__input popup__input_type_email"
+                  placeholder="Введите почту"
+                  id="signup-email"
+                  required>
+              <span class="popup__input-error">Неправильный формат email</span>
+          </div>
+          <div class="popup__form-input">
+              <label for="signup-password" class="popup__label">Пароль</label>
+              <input
+                  type="password"
+                  name="password"
+                  class="popup__input popup__input_type_password"
+                  placeholder="Введите пароль"
+                  minlength="8"
+                  maxlength="30"
+                  id="signup-password"
+                  required>
+              <span class="popup__input-error">Неправильный формат пароля</span>
+          </div>
+          <div class="popup__form-input">
+              <label for="signup-username" class="popup__label">Имя</label>
+              <input
+                  type="text"
+                  name="username"
+                  class="popup__input popup__input_type_username"
+                  placeholder="Введите своё имя"
+                  minlength="2"
+                  maxlength="30"
+                  id="signup-username"
+                  required>
+              <span class="popup__input-error">Неправильный формат имени</span>
+          </div>
+          <div class="popup__form-error">
+              <span class="popup__input-error">Такой пользователь уже есть</span>
+          </div>
+          <button class="button popup__button">Зарегистрироваться</button>
+      </form>
+      <div class="popup__text">или
+          <a href="index.html" class="popup__link popup__link-signin">Войти</a>
+      </div>
+  </div>
+</div>

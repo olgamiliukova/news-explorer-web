@@ -1,68 +1,16 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" type="image/svg+xml" href="./images/favicon.svg">
-    <meta name="description" content="Новостной обозреватель">
-    <meta name="author" content="Ольга Милюкова">
-    <title>SavedNews</title>
-    <link rel="stylesheet" href="./index.css">
+    ${require('../partials/head-meta.html')}
 </head>
 <body>
     <div class="page">
         <div class="content">
-            <header class="header header_dark">
-                <div class="header__container header__container_expandable section">
-                    <div class="header__container-row">
-                        <a href="index.html">
-                            <div class="header__logo header__logo_dark"></div>
-                        </a>
-                        <button class="header__menu-toggler">
-                            <i class="header__menu-icon header__menu-icon_toggler-dark"></i>
-                        </button>
-                        <script>
-                            (function() {
-                                document.querySelector('.header__menu-toggler').addEventListener(
-                                    'click',
-                                    function(e) {
-                                        const header = this.closest('.header');
-
-                                        header.classList.toggle('header_expanded');
-
-                                        const icon = this.children.item(0);
-                                        icon.classList.toggle('header__menu-icon_toggler-dark');
-                                        icon.classList.toggle('header__menu-icon_collapse-dark');
-                                    }
-                                );
-                            })();
-                        </script>
-                    </div>
-                    <div class="header__container-line"></div>
-                    <div class="header__container-row header__container-row_expandable">
-                        <nav class="header__menu">
-                            <a href="index.html" class="header__menu-item header__menu-item_dark">Главная</a>
-                            <!-- <button class="header__menu-button header__menu-button_dark button">Авторизоваться</button> -->
-                            <a href="saved-news.html" class="header__menu-item header__menu-item_dark header__menu-item_active">Сохраненные статьи</a>
-                            <button class="header__menu-button header__menu-button_dark button">Грета
-                                <i class="header__menu-icon header__menu-icon_logout-dark"></i>
-                            </button>
-                        </nav>
-                    </div>
-                </div>
-            </header>
+            ${require('../partials/header-saved-news.html')}
             <main>
-                <section class="search-info section">
-                    <h3 class="search-info__heading">Сохранённые статьи</h3>
-                    <h1 class="search-info__title title title_mid">Грета, у вас 5 сохранённых статей</h1>
-                    <p class="search-info__subtitle search-info__subtitle_dark subtitle subtitle_normal">По ключевым словам:
-                      <span class="search-info__subtitle search-info__subtitle_bold">Природа, Тайга</span> и
-                      <span class="search-info__subtitle search-info__subtitle_bold">2 другим</span>
-                    </p>
-                </section>
+                ${require('../partials/search-info.html')}
                 <div class="results">
-                    <div class="results__container section section_results">
+                    <section class="results__container section section_results">
                         <div class="cards__container cards__container_saved-news-page">
                             <div class="card">
                                 <div class="card__image-cover">
@@ -75,7 +23,7 @@
                                     <div class="tooltip">
                                         <div class="tooltip__text">Убрать из сохранённых</div>
                                     </div>
-                                    <img class="card__image" src="images/image_06.png" alt="стебли">
+                                    <img class="card__image" src="../images/image_06.png" alt="стебли">
                                 </div>
                                 <div class="card__description">
                                     <h3 class="card__date">2 августа, 2019</h3>
@@ -95,7 +43,7 @@
                                     <div class="tooltip">
                                         <div class="tooltip__text">Убрать из сохранённых</div>
                                     </div>
-                                    <img class="card__image" src="images/image_01.png" alt="дороги">
+                                    <img class="card__image" src="../images/image_01.png" alt="дороги">
                                 </div>
                                 <div class="card__description">
                                     <h3 class="card__date">2 августа, 2019</h3>
@@ -116,7 +64,7 @@
                                     <div class="tooltip">
                                         <div class="tooltip__text">Убрать из сохранённых</div>
                                     </div>
-                                    <img class="card__image" src="images/image_05.png" alt="листочки">
+                                    <img class="card__image" src="../images/image_05.png" alt="листочки">
                                 </div>
                                 <div class="card__description">
                                     <h3 class="card__date">2 августа, 2019</h3>
@@ -136,7 +84,7 @@
                                     <div class="tooltip">
                                         <div class="tooltip__text">Убрать из сохранённых</div>
                                     </div>
-                                    <img class="card__image" src="images/image_06.png" alt="листочки">
+                                    <img class="card__image" src="../images/image_06.png" alt="листочки">
                                 </div>
                                 <div class="card__description">
                                     <h3 class="card__date">2 августа, 2019</h3>
@@ -156,7 +104,7 @@
                                     <div class="tooltip">
                                         <div class="tooltip__text">Убрать из сохранённых</div>
                                     </div>
-                                    <img class="card__image" src="images/image_01.png" alt="дороги">
+                                    <img class="card__image" src="../images/image_01.png" alt="дороги">
                                 </div>
                                 <div class="card__description">
                                     <h3 class="card__date">2 августа, 2019</h3>
@@ -167,34 +115,10 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </section>
                 </div>
             </main>
-            <footer class="footer section">
-                <p class="footer__copyright">&copy; 2020 Supersite, Powered by News API</p>
-                <nav class="footer__lists">
-                    <ul class="footer__list-links">
-                        <li>
-                            <a href="index.html" class="footer__link">Главная</a>
-                        </li>
-                        <li>
-                            <a href="https://praktikum.yandex.ru/" class="footer__link">Яндекс.Практикум</a>
-                        </li>
-                    </ul>
-                    <ul class="footer__list-social">
-                        <li>
-                            <a href="https://github.com/" class="footer__link-social">
-                                <i class="footer__link-icon footer__link-icon_github"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.facebook.com" class="footer__link-social">
-                                <i class="footer__link-icon footer__link-icon_facebook"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </footer>
+            ${require('../partials/footer.html')}
         </div>
     </div>
 </body>

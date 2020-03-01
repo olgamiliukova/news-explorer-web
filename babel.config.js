@@ -9,6 +9,7 @@ const presets = [
         firefox: '60',
         chrome: '64',
         safari: '11.1',
+        yandex: '',
       },
       useBuiltIns: 'usage',
       corejs: '3.0.0',

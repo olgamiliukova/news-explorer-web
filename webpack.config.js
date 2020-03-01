@@ -1,82 +1,51 @@
-const dotenv = require('dotenv');
 const path = require('path');
-const cssnano = require('cssnano');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const WebpackPackage = require('webpack');
-const WebpackMd5Hash = require('webpack-md5-hash');
 
-// Configure dotenv
-dotenv.config();
+const config = require('./config/webcore.config');
+const loaders = require('./config/webpack.loaders');
+const pages = require('./config/webpack.pages');
+const plugins = require('./config/webpack.plugins');
 
-module.exports = {
-  entry: {
-    main: './src/index.js',
-  },
-  output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: '[name].[chunkhash].js',
-  },
-  module: {
-    rules: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
+module.exports = () => [
+  {
+    mode: ['production', 'development'].includes(config.env)
+      ? config.env
+      : 'development',
+    devtool: config.env === 'production'
+      ? 'hidden-source-map'
+      : 'cheap-eval-source-map',
+    devServer: {
+      contentBase: path.join(config.root, config.paths.src),
+      watchContentBase: true,
+      hot: true,
+      open: true,
+      host: config.dev_host,
+      port: config.dev_port,
+    },
+    entry: pages.entry,
+    output: {
+      path: path.resolve(__dirname, 'dist'),
+      filename: 'scripts/[name].[hash].js',
+      publicPath: config.site_url,
+    },
+    optimization: {
+      minimize: config.env === 'production',
+      splitChunks: {
+        cacheGroups: {
+          vendor: {
+            test: /node_modules/,
+            chunks: 'initial',
+            name: 'vendor',
+            enforce: true,
+          },
         },
       },
-      {
-        test: /\.css$/,
-        use: [
-          process.env.NODE_ENV === 'development'
-            ? 'style-loader'
-            : MiniCssExtractPlugin.loader,
-          'css-loader',
-          'postcss-loader',
-        ],
-      },
-      {
-        test: /\.(png|jpg|gif|ico|svg)$/,
-        use: [
-          'file-loader?name=./images/[name].[ext]',
-          {
-            loader: 'image-webpack-loader',
-            options: {},
-          },
-        ],
-      },
-      {
-        test: /\.(eot|ttf|woff|woff2)$/,
-        loader: 'file-loader?name=./vendor/[name].[ext]',
-      },
+    },
+    module: {
+      rules: loaders,
+    },
+    plugins: [
+      ...plugins,
+      ...pages.plugins,
     ],
   },
-  plugins: [
-    new MiniCssExtractPlugin({
-      filename: 'style.[contenthash].css',
-    }),
-    new OptimizeCssAssetsPlugin({
-      assetNameRegExp: /\.css$/g,
-      cssProcessor: cssnano,
-      cssProcessorPluginOptions: {
-        preset: ['default'],
-      },
-      canPrint: true,
-    }),
-    new HtmlWebpackPlugin({
-      inject: false,
-      hash: true,
-      template: './src/index.html',
-      filename: 'index.html',
-    }),
-    new WebpackMd5Hash(),
-    new WebpackPackage.DefinePlugin({
-      NODE_ENV: JSON.stringify(process.env.NODE_ENV),
-      API_URL: JSON.stringify(process.env.API_URL),
-      API_USERNAME: JSON.stringify(process.env.API_USERNAME),
-      API_PASSWORD: JSON.stringify(process.env.API_PASSWORD),
-    }),
-  ],
-};
+];
