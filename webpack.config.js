@@ -1,7 +1,7 @@
 const path = require('path');
 
-const plugins = require('./config/webpack.plugins');
 const config = require('./config/webcore.config');
+const plugins = require('./config/webpack.plugins');
 const loaders = require('./config/webpack.loaders');
 const pages = require('./config/webpack.pages');
 
@@ -14,18 +14,20 @@ module.exports = () => [
       ? 'hidden-source-map'
       : 'cheap-eval-source-map',
     devServer: {
-      contentBase: path.join(config.root, config.paths.src),
+      contentBase: path.resolve(config.root, config.paths.dist),
+      contentBasePublicPath: config.publicPath,
       watchContentBase: true,
+      progress: true,
       hot: true,
       open: true,
-      host: config.dev_host,
-      port: config.dev_port,
+      host: config.devHost,
+      port: config.devPort,
     },
     entry: pages.entry,
     output: {
-      path: path.resolve(__dirname, 'dist'),
+      path: path.resolve(config.root, config.paths.dist),
       filename: 'scripts/[name].[hash].js',
-      publicPath: config.site_url,
+      publicPath: config.publicPath,
     },
     optimization: {
       minimize: config.env === 'production',

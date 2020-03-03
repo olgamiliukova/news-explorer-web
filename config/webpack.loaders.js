@@ -82,15 +82,14 @@ const imageLoader = {
 
 const images = {
   test: /\.(gif|png|jpe?g)$/i,
-  exclude: /fonts/,
+  exclude: /assets/,
   use: [
     {
       loader: 'url-loader',
       options: {
-        name: '/images/[name].[hash].[ext]',
+        name: 'images/[name].[hash].[ext]',
         limit: false,
         fallback: require.resolve('file-loader'),
-        esModule: false,
       },
     },
     ...(config.env === 'production' ? [imageLoader] : []),
@@ -103,11 +102,11 @@ const fonts = {
   exclude: /images/,
   use: [
     {
-      loader: 'file-loader',
-      query: {
-        name: '[name].[hash].[ext]',
-        outputPath: '/assets/',
-        esModule: false,
+      loader: 'url-loader',
+      options: {
+        name: 'assets/[name].[hash].[ext]',
+        limit: false,
+        fallback: require.resolve('file-loader'),
       },
     },
   ],

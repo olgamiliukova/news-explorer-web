@@ -1,14 +1,15 @@
 /* eslint-disable import/no-extraneous-dependencies */
 const cssnano = require('cssnano');
 
-const WebpackDotenv = require('webpack-dotenv-plugin');
-const WebpackPackage = require('webpack');
+const DotenvWebpackPlugin = require('dotenv-webpack');
 const WebpackMd5Hash = require('webpack-md5-hash');
 const WebpackBar = require('webpackbar');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const CspHtmlWebpackPlugin = require('csp-html-webpack-plugin');
+
+const config = require('./webcore.config');
 
 // Optimize CSS assets
 const optimizeCss = new OptimizeCssAssetsPlugin({
@@ -21,12 +22,12 @@ const optimizeCss = new OptimizeCssAssetsPlugin({
 });
 
 module.exports = [
-  new WebpackDotenv({
-    sample: './.env.dist',
+  new DotenvWebpackPlugin({
     path: './.env',
-  }),
-  new WebpackPackage.DefinePlugin({
-    NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+    safe: './.env.dist',
+    silent: true,
+    expand: true,
+    defaults: './.env.dist',
   }),
   new CleanWebpackPlugin(),
   new MiniCssExtractPlugin({
@@ -36,7 +37,7 @@ module.exports = [
   new WebpackBar({
     color: '#ff6469',
   }),
-  ...(process.env.NODE_ENV === 'production' ? [optimizeCss] : []),
+  ...(config.env === 'production' ? [optimizeCss] : []),
   new CspHtmlWebpackPlugin({
     'base-uri': "'self'",
     'object-src': "'none'",

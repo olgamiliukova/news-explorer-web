@@ -64,8 +64,9 @@ module.exports = {
         },
       },
       ...options,
+      title: [options.title, config.pageTitle].join(' - '),
       meta: {
-        ...config.site_meta,
+        ...config.pageMeta,
         ...(options.meta || {}),
       },
       templateParameters: {
