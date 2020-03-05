@@ -1,0 +1,6 @@
+.popup__form-input {
+    display: flex;
+    flex-direction: column;
+    height: 37px;
+    margin-bottom: 36px;
+}

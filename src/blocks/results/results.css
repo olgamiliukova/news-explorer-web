@@ -1,0 +1,14 @@
+@import url(./__button/results__button.css);
+@import url(./__container/results__container.css);
+@import url(./__image/results__image.css);
+@import url(./__loading/results__loading.css);
+@import url(./__no-results/results__no-results.css);
+@import url(./__subtitle/results__subtitle.css);
+@import url(./__title/results__title.css);
+
+.results {
+    background: #F5F6F7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

@@ -1,0 +1,9 @@
+@import url(./_main/title_main.css);
+@import url(./_mid/title_mid.css);
+@import url(./_small/title_small.css);
+
+.title {
+    font-family: Roboto Slab;
+    font-style: normal;
+    font-weight: normal;
+}

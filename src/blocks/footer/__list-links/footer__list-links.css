@@ -1,0 +1,24 @@
+.footer__list-links {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 768px) {
+    
+}
+
+@media (max-width: 540px) {
+    .footer__list-links {
+        flex-direction: column;
+        margin-block-start: 0;
+     }
+}
+
+@media (max-width: 320px) {
+    /* .footer__list-links {
+       flex-direction: column;
+       margin-block-start: 0;
+    } */
+}

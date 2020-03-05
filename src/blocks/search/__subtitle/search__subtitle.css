@@ -1,0 +1,18 @@
+.search__subtitle {
+    margin-bottom: 64px;
+    width: 90%;
+}
+
+@media (max-width: 768px) {
+    .search__subtitle {
+        margin-bottom: 48px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 425px) {
+    .search__subtitle {
+        width: 100%;
+        margin-bottom: 120px;
+    }
+}

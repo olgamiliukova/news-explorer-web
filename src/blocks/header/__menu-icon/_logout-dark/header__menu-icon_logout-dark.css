@@ -1,0 +1,14 @@
+.header__menu-icon.header__menu-icon_logout-dark {
+    background: url(./header__menu-icon_logout-dark.svg) center no-repeat;
+    width: 18px;
+    height: 16px;
+    background-color: transparent;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+@media (max-width: 540px) {
+    .header.header_expanded .header__menu-icon.header__menu-icon_logout-dark {
+        background: url(../_logout-light/header__menu-icon_logout-light.svg) center no-repeat;
+    }
+}

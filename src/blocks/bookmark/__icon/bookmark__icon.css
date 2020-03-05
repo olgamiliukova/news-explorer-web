@@ -1,0 +1,18 @@
+@import url(./_hover/bookmark__icon_hover.css);
+@import url(./_marked/bookmark__icon_marked.css);
+
+.bookmark__icon {
+    background: url(./bookmark__icon.svg) center no-repeat;
+    background-color: transparent;
+    border: none;
+    width: 14px;
+    height: 19px;
+    padding: 12px;
+    cursor: pointer;
+    /* stroke: #B6BCBF;
+    stroke-width: 2px; */
+}
+
+.bookmark__icon:hover {
+    stroke: #1A1B22;
+}

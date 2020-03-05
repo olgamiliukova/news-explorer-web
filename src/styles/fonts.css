@@ -1,0 +1,41 @@
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url(../assets/fonts/robotoslab-regular-webfont.woff);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(../assets/fonts/roboto-regular-webfont.woff);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(../assets/fonts/roboto-medium-webfont.woff);
+    font-weight: medium;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url(../assets/fonts/Inter-Regular.woff);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url(../assets/fonts/Inter-Medium.woff);
+    font-weight: medium;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url(../assets/fonts/Inter-Black.woff);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url(../assets/fonts/SourceSansPro-Regular.woff);
+    font-weight: normal;
+}

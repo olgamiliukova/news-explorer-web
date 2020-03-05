@@ -1,0 +1,8 @@
+.header__menu-icon_logout-light {
+    background: url(./header__menu-icon_logout-light.svg) center no-repeat;
+    width: 18px;
+    height: 16px;
+    background-color: transparent;
+    display: inline-block;
+    margin-left: 5px;
+}

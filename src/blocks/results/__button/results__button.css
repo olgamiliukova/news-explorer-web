@@ -1,0 +1,33 @@
+.results__button {
+    border-radius: 80px;
+    background-color: #ffffff;
+    color: #1A1B22;
+    padding: 18px 84px;
+    align-self: center;
+    margin: 64px 0 80px;
+    font-size: 18px;
+}
+
+.results__button:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    opacity: .9;
+    transition: background-color 0.1s linear;
+}
+
+@media (max-width: 768px) {
+    .results__button {
+        padding: 15px 60px;
+        margin: 30px 0 40px;
+    }
+}
+
+@media (max-width: 375px) {
+
+}
+
+@media (max-width: 320px) {
+    .results__button {
+        padding: 15px 80px;
+        margin: 17px 0 33px;
+    }
+}

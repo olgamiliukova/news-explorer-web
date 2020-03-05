@@ -1,0 +1,58 @@
+@import url(./_narrow/section_narrow.css);
+@import url(./_results/section_results.css);
+@import url(./_search/section_search.css);
+
+.section {
+    max-width: 1232px;
+    width: 100%;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+@media (max-width: 1280px) {
+    .section {
+        max-width: 1024px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .section {
+        max-width: 768px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        max-width: 688px;
+    }
+}
+
+@media (max-width: 688px) {
+    .section {
+        max-width: 540px;
+    }
+}
+
+@media (max-width: 540px) {
+    .section {
+        max-width: 448px;
+    }
+}
+
+@media (max-width: 425px) {
+    .section {
+        max-width: 375px;
+    }
+}
+
+@media (max-width: 375px) {
+    .section {
+        max-width: 320px;
+    }
+}
+
+@media (max-width: 320px) {
+    .section {
+        max-width: 290px;
+    }
+}

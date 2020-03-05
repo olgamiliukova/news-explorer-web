@@ -1,0 +1,15 @@
+@import url(./_locked/button_locked.css);
+
+.button {
+    cursor: pointer;
+    display: inline-block;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    /* font-size: 18px; */
+    line-height: 24px;
+    cursor: pointer;
+    border: 1px solid #ffffff;
+    outline: none;
+    text-align: center;
+}

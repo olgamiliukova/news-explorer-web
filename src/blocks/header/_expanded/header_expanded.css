@@ -1,0 +1,10 @@
+@media (max-width: 540px) {
+  .header.header_expanded {
+    background: #1A1B22;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    height: auto;
+    position: fixed;
+    top: 0;
+  }
+}

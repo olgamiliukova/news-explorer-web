@@ -1,0 +1,5 @@
+@media (max-width: 540px) {
+    .header__container.header__container_expandable {
+        max-width: none;
+    }
+}

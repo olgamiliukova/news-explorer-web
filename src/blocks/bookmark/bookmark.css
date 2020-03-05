@@ -1,0 +1,31 @@
+@import url(./__icon/bookmark__icon.css);
+
+.bookmark {
+    width: 40px;
+    height: 40px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    border: none;
+    cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+    .bookmark  {
+        top: 8px;
+        right: 8px;
+    }
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 425px) {
+    .bookmark  {
+        top: 16px;
+        right: 16px;
+    }
+}

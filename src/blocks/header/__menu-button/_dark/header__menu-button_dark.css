@@ -1,0 +1,10 @@
+.header__menu-button.header__menu-button_dark {
+    color: #1A1B22;
+    border: 1px solid #D1D2D6;
+}
+
+@media (max-width: 540px) {
+    .header.header_expanded.header_dark .header__menu-button.header__menu-button_dark {
+        color: #FFFFFF;
+    }
+}

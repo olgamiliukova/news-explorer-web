@@ -1,0 +1,22 @@
+.footer__lists {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+}
+
+@media (max-width: 768px) {
+    
+}
+
+@media (max-width: 540px) {
+    .footer__lists {
+        width: 100%;
+     }
+}
+
+@media (max-width: 320px) {
+    /* .footer__lists {
+       width: 100%;
+    } */
+}

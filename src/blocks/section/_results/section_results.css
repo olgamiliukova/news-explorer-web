@@ -1,0 +1,29 @@
+@media (max-width: 688px) {
+    .section.section_results {
+        max-width: 540px;
+    }
+}
+
+@media (max-width: 540px) {
+    .section.section_results {
+        max-width: 448px;
+    }
+}
+
+@media (max-width: 425px) {
+    .section.section_results {
+        max-width: 375px;
+    }
+}
+
+@media (max-width: 375px) {
+    .section.section_results {
+        max-width: 320px;
+    }
+}
+
+@media (max-width: 320px) {
+    .section.section_results {
+        max-width: 288px;
+    }
+}
