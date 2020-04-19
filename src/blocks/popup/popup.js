@@ -1,24 +1,21 @@
-module.exports = (context) => {
-  const popups = context.querySelectorAll('.popup');
-  if (!popups.length) {
-    return;
-  }
+import template from './popup.html';
+import link from './__link/popup__link';
+import subtext from './__subtext/popup__subtext';
 
-  popups.forEach(
-    (popup) => {
-      const closeBtn = popup.querySelector('.popup__close');
-      if (!closeBtn) {
-        return;
-      }
-
-      closeBtn.addEventListener(
-        'click',
-        (e) => {
-          e.preventDefault();
-
-          popup.classList.remove('popup_is-opened');
-        },
-      );
+export default {
+  baseClass: 'popup',
+  template,
+  options: {
+    required: [
+      'title',
+    ],
+    defaults: {
+      content: () => '',
+      element: () => '',
     },
-  );
+  },
+  elements: {
+    link,
+    subtext,
+  },
 };

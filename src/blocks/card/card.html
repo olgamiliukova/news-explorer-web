@@ -1,0 +1,15 @@
+<div class="card">
+  <div class="card__image-cover">
+    ${elements()}
+    <a href="${article.link}" target="_blank" class="card__link">
+      <img class="card__image" src="${article.image}" alt="${article.title}">
+    </a>
+  </div>
+  <div class="card__description">
+    <h3 class="card__date">${datetime.format(article.date)}</h3>
+    <h2 class="card__title title title_small"><a href="${article.link}" target="_blank"
+        class="card__link">${article.title}</a></h2>
+    <p class="card__subtitle subtitle subtitle_small">${article.text}</p>
+    <p class="card__source">${article.source}</p>
+  </div>
+</div>

@@ -1,4 +1,4 @@
-.header__menu-icon.header__menu-icon_logout-dark {
+.header_theme_dark .header__menu-icon_logout {
     background: url(./header__menu-icon_logout-dark.svg) center no-repeat;
     width: 18px;
     height: 16px;
@@ -8,7 +8,7 @@
 }
 
 @media (max-width: 540px) {
-    .header.header_expanded .header__menu-icon.header__menu-icon_logout-dark {
+    .header_theme_dark.header_expanded .header__menu-icon_logout {
         background: url(../_logout-light/header__menu-icon_logout-light.svg) center no-repeat;
     }
 }

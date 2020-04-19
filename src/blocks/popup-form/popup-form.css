@@ -1,0 +1,10 @@
+@import url(./__button/popup-form__button.css);
+@import url(./__error/popup-form__error.css);
+@import url(./__field/popup-form__field.css);
+@import url(./__input/popup-form__input.css);
+@import url(./__input-error/popup-form__input-error.css);
+@import url(./__label/popup-form__label.css);
+
+.popup-form {
+    margin-top: 22px;
+}

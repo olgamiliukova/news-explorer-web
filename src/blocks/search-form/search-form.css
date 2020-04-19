@@ -1,0 +1,22 @@
+@import url(./__button/search-form__button.css);
+@import url(./__input/search-form__input.css);
+
+.search-form {
+    width: 100%;
+    display: flex;
+    margin: 0 0 80px;
+}
+
+@media (max-width: 768px) {
+    .search-form {
+        margin: 0 0 48px;
+    }
+}
+
+@media (max-width: 425px) {
+    .search-form {
+        display: flex;
+        flex-direction: column;
+        margin: 0 0 32px;
+    }
+}

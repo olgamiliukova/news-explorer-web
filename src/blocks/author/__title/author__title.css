@@ -1,0 +1,15 @@
+.author__title {
+    margin: 35px 0 20px;
+}
+
+@media (max-width: 768px) {
+    .author__title {
+        margin: 0 0 15px;
+    }
+}
+
+@media (max-width: 540px) {
+    .author__title {
+        margin: 0 0 15px;
+    }
+}

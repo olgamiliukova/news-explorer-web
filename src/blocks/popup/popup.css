@@ -1,17 +1,10 @@
-@import url(./__button/popup__button.css);
+
 @import url(./__close/popup__close.css);
 @import url(./__close-icon/popup__close-icon.css);
 @import url(./__content/popup__content.css);
-@import url(./__form/popup__form.css);
-@import url(./__form-error/popup__form-error.css);
-@import url(./__form-input/popup__form-input.css);
-@import url(./__input/popup__input.css);
-@import url(./__input-error/popup__input-error.css);
-@import url(./__label/popup__label.css);
 @import url(./__link/popup__link.css);
-@import url(./__text/popup__text.css);
+@import url(./__subtext/popup__subtext.css);
 @import url(./__title/popup__title.css);
-@import url(./_is-opened/popup_is-opened.css);
 
 .popup {
     position: fixed;
@@ -23,7 +16,6 @@
     align-items: center;
     justify-content: center;
     z-index: 999;
-    display: none;
 }
 
 .popup::before {

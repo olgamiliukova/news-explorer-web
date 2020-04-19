@@ -6,13 +6,25 @@ const config = require('./webcore.config');
 
 const sourceMap = config.env !== 'production';
 
-const html = {
-  test: /\.(html)$/,
+const pages = {
+  test: /(pages)\/(.*)\.html$/,
   use: [
     {
       loader: 'html-loader',
       options: {
         interpolate: true,
+      },
+    },
+  ],
+};
+
+const blocks = {
+  test: /blocks\/(.*)\.html$/,
+  use: [
+    {
+      loader: 'html-loader',
+      options: {
+        interpolate: false,
       },
     },
   ],
@@ -113,7 +125,8 @@ const fonts = {
 };
 
 module.exports = [
-  html,
+  pages,
+  blocks,
   js,
   css,
   images,

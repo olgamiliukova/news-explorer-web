@@ -1,0 +1,9 @@
+.header_theme_dark .header__menu-link {
+    color: #1A1B22;
+}
+
+@media (max-width: 540px) {
+    .header_theme_dark.header_expanded .header__menu-link {
+        color: #FFFFFF;
+    }
+}

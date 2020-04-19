@@ -1,3 +1,5 @@
+@import url(./_hover/footer__link_hover.css);
+
 .footer__link {
     font-family: Roboto;
     font-style: normal;
@@ -10,11 +12,6 @@
     cursor: pointer;
 }
 
-.footer__link:hover {
-    opacity: 0.7;
-    transition: opacity 0.1s linear;
-}
-
 @media (max-width: 768px) {
     .footer__link {
         margin-right: 20px;
@@ -25,10 +22,4 @@
     .footer__link {
         line-height: 48px;
     }
-}
- 
-@media (max-width: 320px) {
-    /* .footer__link {
-        line-height: 48px;
-    } */
 }

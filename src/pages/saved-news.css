@@ -1,5 +1,7 @@
 @import url(../styles/index.css);
-@import url(../partials/header.css);
-@import url(../partials/search-info.css);
-@import url(../partials/card-news.css);
-@import url(../partials/footer.css);
+@import url(../blocks/header/header.css);
+@import url(../blocks/search-info/search-info.css);
+@import url(../blocks/card/card.css);
+@import url(../blocks/footer/footer.css);
+@import url(../blocks/popup/popup.css);
+@import url(../blocks/popup-form/popup-form.css);
