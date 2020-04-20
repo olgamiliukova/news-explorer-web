@@ -2,7 +2,7 @@ export default {
   index: {
     index: {
       type: 'link',
-      href: '/',
+      href: process.env.PUBLIC_PATH || '/',
       text: 'NAVIGATION_DEFAULT_INDEX',
     },
     login: {
@@ -14,12 +14,12 @@ export default {
   logged: {
     index: {
       type: 'link',
-      href: '/',
+      href: process.env.PUBLIC_PATH || '/',
       text: 'NAVIGATION_LOGGED_INDEX',
     },
     saved: {
       type: 'link',
-      href: '/saved-news.html',
+      href: `${process.env.PUBLIC_PATH || '/'}saved-news.html`,
       text: 'NAVIGATION_LOGGED_SAVED',
     },
     logout: {
@@ -31,7 +31,7 @@ export default {
   footer: {
     index: {
       type: 'link',
-      href: '/',
+      href: process.env.PUBLIC_PATH || '/',
       text: 'NAVIGATION_FOOTER_INDEX',
     },
     yandex: {
