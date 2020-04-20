@@ -12,6 +12,7 @@ export default {
     ],
     defaults: {
       theme: 'light',
+      publicUrl: '/',
     },
   },
   elements: {

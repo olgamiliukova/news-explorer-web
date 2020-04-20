@@ -1,7 +1,7 @@
 export default {
   en: {
-    BLOCK_AUTHOR_TITLE: 'Author about',
-    BLOCK_AUTHOR_ABOUT: 'This is a block with a description of the author of the project. Here you should indicate what you are doing.',
+    BLOCK_AUTHOR_TITLE: 'About author',
+    BLOCK_AUTHOR_ABOUT: '<strong>Milyukova Olga Aleksandrovna</strong>, student of <strong>Yandex.Praktikum</strong> on the course <strong>"Web-developer"</strong>. I have little experience in programming, but during the training I gained knowledge on the following front-end development technologies: <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>. And also, I gained knowledge and skills in the backend for technology: <strong>NodeJS</strong>, <strong>Webpack</strong> and others',
     BLOCK_SEARCH_TITLE: 'What is happening in the World?',
     BLOCK_SEARCH_SUBTITLE: 'Find the latest articles on any topic and save in your personal account',
     BLOCK_SEARCH_FORM_INPUT_PLACEHOLDER: 'Enter news topic',
@@ -56,7 +56,7 @@ export default {
   },
   ru: {
     BLOCK_AUTHOR_TITLE: 'Об авторе',
-    BLOCK_AUTHOR_ABOUT: 'Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владеете',
+    BLOCK_AUTHOR_ABOUT: '<strong>Милюкова Ольга Александровна</strong>, студент <strong>Яндекс.Практикум</strong> по курсу <strong>"Web-разработчик"</strong>. Имею небольшой опыт в программировании, но за время обучения приобрела знания по следующим технологиям фронтенд-разработки: <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>. А так же, приобрела знания и навыки в бэкенд-части по технологиям: <strong>NodeJS</strong>, <strong>Webpack</strong> и другие',
     BLOCK_AUTHOR_NAME: 'Ольга Ионова',
     BLOCK_SEARCH_TITLE: 'Что в мире творится?',
     BLOCK_SEARCH_SUBTITLE: 'Находите самые свежие статьи на любую тему и сохраняйте в своём личном кабинете',

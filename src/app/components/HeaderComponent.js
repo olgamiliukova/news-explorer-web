@@ -8,6 +8,7 @@ export default class HeaderComponent extends BlockComponent {
       loggedIn: false,
       userName: '',
       theme: 'light',
+      publicUrl: process.env.PUBLIC_PATH,
       page: 'index',
       togglerClass: 'header__menu-toggler',
       toggledClass: 'header_expanded',
