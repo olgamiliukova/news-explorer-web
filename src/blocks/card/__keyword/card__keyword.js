@@ -4,11 +4,8 @@ export default {
   baseClass: 'card__keyword',
   template,
   options: {
-    // required: [
-    //   'keyword',
-    // ],
-    defaults: {
-      keyword: 'keyword',
-    },
+    required: [
+      'article',
+    ],
   },
 };

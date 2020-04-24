@@ -3,7 +3,7 @@
   "rules": {
     "no-console": "off",
     "no-undef": "off",
-    "no-underscore-dangle": "off",
+    "no-underscore-dangle": "off"
   },
   "env": {
     "browser": true,

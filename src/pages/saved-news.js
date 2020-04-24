@@ -47,5 +47,3 @@ app.use(popupFormSignIn);
 app.use(popupFormSignUp);
 
 app.run();
-
-window.app = app;
