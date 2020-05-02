@@ -1,0 +1,31 @@
+.card__keyword {
+    height: 40px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 1024px) {
+    .card__keyword  {
+        top: 8px;
+        left: 8px;
+    }
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 425px) {
+    .card__keyword  {
+        top: 16px;
+        left: 16px;
+    }
+}

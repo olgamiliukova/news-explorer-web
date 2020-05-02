@@ -1,6 +1,12 @@
 .card__image-cover {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     height: 272px;
     position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @media (max-width: 1024px) {

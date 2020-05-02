@@ -6,7 +6,6 @@ const config = require('./webcore.config');
 
 module.exports = {
   entry: {
-    main: path.resolve(config.root, './src/index.js'),
     index: path.resolve(config.root, './src/pages/index.js'),
     saved: path.resolve(config.root, './src/pages/saved-news.js'),
   },
@@ -16,21 +15,16 @@ module.exports = {
       filename: 'index.html',
       template: path.resolve(config.root, './src/pages/index.html'),
       templateParameters: {},
-      chunks: ['index', 'main', 'vendor'],
-    },
-    {
-      title: 'News Explorer',
-      filename: 'logged-in.html',
-      template: path.resolve(config.root, './src/pages/logged-in.html'),
-      templateParameters: {},
-      chunks: ['index', 'main', 'vendor'],
+      chunks: ['index', 'vendor'],
     },
     {
       title: 'Saved News - News Explorer',
       filename: 'saved-news.html',
       template: path.resolve(config.root, './src/pages/saved-news.html'),
-      templateParameters: {},
-      chunks: ['saved', 'main', 'vendor'],
+      templateParameters: {
+        title: 'Saved News - News Explorer',
+      },
+      chunks: ['saved', 'vendor'],
     },
   ].map(
     (options) => new HtmlWebpackPlugin({
@@ -49,7 +43,7 @@ module.exports = {
       cspPlugin: {
         enabled: true,
         policy: {
-          'base-uri': "'self'",
+          'base-uri': `'self' ${config.mainApi.endpoint} ${config.newsApi.endpoint}`,
           'object-src': "'none'",
           'script-src': ["'unsafe-inline'", "'self'", "'unsafe-eval'"],
           'style-src': ["'unsafe-inline'", "'self'", "'unsafe-eval'"],

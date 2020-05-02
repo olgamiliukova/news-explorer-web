@@ -1,4 +1,4 @@
-.header__menu-icon_collapse-dark {
+.header_theme_dark .header__menu-icon_collapse {
     background: url(./header__menu-icon_collapse-dark.svg) center no-repeat;
     width: 24px;
     height: 24px;
@@ -6,7 +6,7 @@
 }
 
 @media (max-width: 540px) {
-    .header.header_expanded .header__menu-icon_collapse-dark {
+    .header_theme_dark.header_expanded .header__menu-icon_collapse {
         background: url(../_collapse-light/header__menu-icon_collapse-light.svg) center no-repeat;
     }
 }

@@ -1,0 +1,3 @@
+.card__bookmark.card__bookmark_marked .card__bookmark-icon {
+    background: url(./card__bookmark-icon_marked.svg) center no-repeat;
+}

@@ -1,0 +1,11 @@
+@import url(./_hover/card__delete-icon_hover.css);
+
+.card__delete-icon {
+    background: url(./card__delete-icon.svg) center no-repeat;
+    background-color: transparent;
+    border: none;
+    width: 19px;
+    height: 19px;
+    padding: 10px;
+    cursor: pointer;
+}

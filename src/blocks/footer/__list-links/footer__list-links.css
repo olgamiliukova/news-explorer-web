@@ -15,10 +15,3 @@
         margin-block-start: 0;
      }
 }
-
-@media (max-width: 320px) {
-    /* .footer__list-links {
-       flex-direction: column;
-       margin-block-start: 0;
-    } */
-}

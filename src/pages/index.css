@@ -1,8 +1,10 @@
 @import url(../styles/index.css);
 @import url(../blocks/cover/cover.css);
-@import url(../partials/header.css);
-@import url(../partials/search.css);
-@import url(../partials/card-news.css);
-@import url(../partials/author-info.css);
-@import url(../partials/footer.css);
-@import url(../partials/popup.css);
+@import url(../blocks/header/header.css);
+@import url(../blocks/search/search.css);
+@import url(../blocks/search-form/search-form.css);
+@import url(../blocks/card/card.css);
+@import url(../blocks/author/author.css);
+@import url(../blocks/footer/footer.css);
+@import url(../blocks/popup/popup.css);
+@import url(../blocks/popup-form/popup-form.css);

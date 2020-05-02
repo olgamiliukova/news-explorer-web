@@ -28,6 +28,14 @@ module.exports = {
   // Local development port
   devPort: process.env.DEV_PORT || 8000,
 
+  mainApi: {
+    endpoint: process.env.BACKEND_MAIN_ENDPOINT || 'http://localhost:3000',
+  },
+
+  newsApi: {
+    endpoint: process.env.BACKEND_NEWS_ENDPOINT || 'http://newsapi.org/v2',
+  },
+
   // Advanced configuration, edit with caution!
   env: process.env.NODE_ENV,
   root: process.cwd(),

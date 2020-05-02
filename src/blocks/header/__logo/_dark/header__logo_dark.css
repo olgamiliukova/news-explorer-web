@@ -1,9 +1,9 @@
-.header__logo.header__logo_dark {
+.header_theme_dark .header__logo {
     background-image: url(./header__logo_dark.svg);
 }
 
 @media (max-width: 540px) {
-    .header.header_expanded.header_dark .header__logo.header__logo_dark {
+    .header_expanded.header_theme_dark .header__logo {
         background-image: url(../header__logo.svg);
     }
 }

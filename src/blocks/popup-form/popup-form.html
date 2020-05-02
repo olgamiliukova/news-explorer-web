@@ -1,0 +1,7 @@
+<form class="form popup-form" novalidate>
+    ${elements()}
+    <div class="form__error popup-form__error">
+        <span class="form__input-error popup-form__input-error ${formError ? 'popup-form__input-error_display' : ''}">${translate(formError)}</span>
+    </div>
+    <button class="popup-form__button form__button button">${translate(buttonText)}</button>
+</form>

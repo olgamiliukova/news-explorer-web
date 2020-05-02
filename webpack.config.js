@@ -1,3 +1,5 @@
+require('core-js');
+
 const path = require('path');
 
 const config = require('./config/webcore.config');
@@ -23,6 +25,9 @@ module.exports = () => [
       host: config.devHost,
       port: config.devPort,
     },
+    performance: {
+      hints: false,
+    },
     entry: pages.entry,
     output: {
       path: path.resolve(config.root, config.paths.dist),
@@ -30,7 +35,6 @@ module.exports = () => [
       publicPath: config.publicPath,
     },
     optimization: {
-      minimize: config.env === 'production',
       splitChunks: {
         cacheGroups: {
           vendor: {
@@ -46,8 +50,8 @@ module.exports = () => [
       rules: loaders,
     },
     plugins: [
-      ...plugins,
       ...pages.plugins,
+      ...plugins,
     ],
   },
 ];

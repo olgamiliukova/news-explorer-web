@@ -1,0 +1,9 @@
+<div class="form__field popup-form__field">
+  <label for="${form}-${fieldName}" class="form__label popup-form__label">${translate(fieldLabel)}</label>
+  <input type="${fieldType}" name="${fieldName}" ${pattern ? `pattern="${pattern}" ` : ``} class="form__input popup-form__input"
+    placeholder="${translate(placeholder)}" id="${form}-${fieldName}" ${minlength ? `minlength="${minlength}" ` : ``}
+    ${maxlength ? `maxlength="${maxlength}" ` : ``} ${required ? `required` : `` }>
+  <span class="form__input-error popup-form__input-error">
+    ${translate(message, { label: fieldLabel })}
+  </span>
+</div>

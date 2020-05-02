@@ -1,4 +1,4 @@
-.header__menu-icon_toggler-dark {
+.header_theme_dark .header__menu-icon_toggler {
     background: url(./header__menu-icon_toggler-dark.svg) center no-repeat;
     width: 24px;
     height: 24px;
@@ -6,7 +6,7 @@
 }
 
 @media (max-width: 540px) {
-    .header.header_expanded .header__menu-icon_toggler-dark {
+    .header_theme_dark.header_expanded .header__menu-icon_toggler {
         background: url(../_toggler-light/header__menu-icon_toggler-light.svg) center no-repeat;
     }
 }

@@ -1,0 +1,13 @@
+@import url(./_display/popup-form__input-error_display.css);
+
+.popup-form__input-error {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    color: #ff0000;
+    display: none;
+    animation: errors .1s ease-in-out;
+    margin-top: 5px;
+}

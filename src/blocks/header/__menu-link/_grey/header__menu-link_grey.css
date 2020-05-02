@@ -1,0 +1,9 @@
+.header__menu-link_grey {
+    color:#B6BCBF;
+}
+
+@media (max-width: 540px) {
+    .header__menu-link_grey {
+        color:#fff;
+    }
+}

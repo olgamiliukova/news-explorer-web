@@ -1,9 +1,0 @@
-.header__menu-item.header__menu-item_grey {
-    color:#B6BCBF;
-}
-
-@media (max-width: 540px) {
-    .header__menu-item.header__menu-item_grey {
-        color:#fff;
-    }
-}

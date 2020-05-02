@@ -1,0 +1,12 @@
+@import url(./_align/popup__subtext_align_left.css);
+
+.popup__subtext {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #000000;
+    margin-top: 16px;
+}
